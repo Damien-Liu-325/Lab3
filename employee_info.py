@@ -1,4 +1,7 @@
 # Define a dictionary to store employee information
+from unittest import result
+
+
 employee_data = [
     {"name": "John", "age": 30, "department": "Sales", "salary": 50000},
     {"name": "Jane", "age": 25, "department": "Marketing", "salary": 60000},
@@ -23,17 +26,21 @@ def calculate_average_salary():
     average = 0
 
     #add your implementation to calculate here
-
-
+    for item in employee_data:
+        total += item["salary"]
+        average = total / len(employee_data)
+    average = round(average, 2)
     return average
 
 def get_employees_by_dept(department):
-    result = []
-
+        result = []
+       
     # Add your implementation from here
+        for item in employee_data:
+            if str(item["department"]) == str(department):
+                result.append(item)
 
-
-    return result
+        return result
 
 def display_all_records():
     print(("Name" + "\t" +"Age" +"\t" +"Department" +"\t" +"Salary" ).expandtabs(15))
