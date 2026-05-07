@@ -37,7 +37,7 @@ def test_bubble_sort_empty():
 
     assert (result == expected_result)
 
-def test_bubble_sort_non_integer():
+def test_bubble_sort_not_integer():
     result = []
     input_arr = [64, 34, 25, 12, 22, 11, "90"]
     expected_result = 2
